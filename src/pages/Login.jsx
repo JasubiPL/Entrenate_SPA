@@ -4,17 +4,21 @@ import Button from '../components/Button';
 
 export default function Login(){
 
-  function checkForm(){
+  function validateForm(e){
     let inputEmail = document.getElementById("login__input-email").value;
     let inputPassword = document.getElementById("login__input-password").value;
     let errorMessage = document.getElementById("login__error-message");
     
     if(inputEmail == "" || inputPassword == ""){
-      alert("Rellene los 2 campos")
-    }else{
 
-      errorMessage.innerHTML ='Usuario  y contraseña incorrectos <br /><a>Mas Informacion</a>';
-      alert("holi")
+      e.preventDefault();
+      errorMessage.innerHTML ='Llena los 2 campo para poder continuar';
+      
+    }else{
+      if(!inputEmail.includes('@' && '.')){
+        e.preventDefault();
+        errorMessage.innerHTML ='Introduce un correo electronico valido';
+      }
     }
   }
 
@@ -25,11 +29,11 @@ export default function Login(){
           <FaKeycdn />
           <h1>Iniciar Sesion</h1>
         </header>
-        <form className='login__form'>
+        <form className='login__form' onSubmit={validateForm}>
           <input id='login__input-email' type="text" placeholder='Correo' />
           <input id='login__input-password' type="password" placeholder='Contraseña' />
           <small id='login__error-message' className='login__error-message' ></small>
-          <Button text='Iniciar Sesion' gender={true} click={() => checkForm()} />
+          <Button text='Iniciar Sesion' gender={true} />
         </form>
       </div>
     </section>
