@@ -1,4 +1,19 @@
 :root {
-
+    --color-green: #00ff00;
+    --color-pink: #FD1C9E;
 }
 
+@font-face {
+    font-family: marca;
+    src: url("./assets/college.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}

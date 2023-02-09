@@ -1,8 +1,8 @@
+import '../styles/Button.css'
 
-
-export default function Button({text}){
+export default function Button({text, click, gender}){
   return(
-    <button>
+    <button className={gender ? 'btn btn-male' : 'btn btn-female'} onClick={() => click()}>
       {text}
     </button>
   )

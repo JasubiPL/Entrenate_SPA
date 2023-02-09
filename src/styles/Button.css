@@ -1,0 +1,17 @@
+.btn{
+    font-size:18px ;
+    font-family: marca;
+    width: 200px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-male{
+    background-color: var(--color-green);
+}
+.btn-female{
+    background-color: var(--color-pink);
+}
