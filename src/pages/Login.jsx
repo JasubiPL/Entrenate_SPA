@@ -27,7 +27,7 @@ export default function Login(){
         </header>
         <form className='login__form'>
           <input id='login__input-email' type="text" placeholder='Correo' />
-          <input id='login__input-password' type="password" placeholder='contraseña' />
+          <input id='login__input-password' type="password" placeholder='Contraseña' />
           <small id='login__error-message' className='login__error-message' ></small>
           <Button text='Iniciar Sesion' gender={true} click={() => checkForm()} />
         </form>

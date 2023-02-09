@@ -8,8 +8,10 @@ export default function Index(){
     <section className='index'>
       <div className='index__container--center'>
         <img className='index__logo' src={logo} />
-        <h1>Programa de regulacion metabolica</h1>
-        <Button text='Entrar x' gender={true} />
+        <h1 className='index__tittle'>Programa de regulacion metabolica</h1>
+        <Link to='/login'>
+          <Button text='Entrar' gender={true} click={() => console.log("click")}/>
+        </Link >
       </div>
     </section>
   )
